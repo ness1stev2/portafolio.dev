@@ -1,0 +1,87 @@
+---
+const items = [
+    {
+        title: "Inicio",
+        href: "#top",
+    },
+    {
+        title: "Experiencia",
+        href: "#experiencia",
+    },
+    {
+        title: "Proyectos",
+        href: "#proyectos",
+    },
+    {
+        title: "Sobre mi",
+        href: "#sobre-mi",
+    },
+    {
+        title: "Contacto",
+        href: "#contacto",
+    },
+];
+---
+
+<header class="py-5 px-5 sticky top-1">
+    <nav
+        class="w-full md:h-screen mx-auto bg-slate-900/70 px-2 sm:px-4 py-2.5 rounded shadow"
+    >
+        <div
+            class="container h-full flex flex-wrap justify-center items-center mx-auto"
+        >
+            <div class="flex items-center">
+                <button
+                    id="menu-toggle"
+                    type="button"
+                    class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
+                >
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Hamburger icon -->
+                    <svg
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div
+                class="w-full md:flex md:flex-col h-full hidden md:items-center justify-center"
+                id="mobile-menu"
+            >
+                <ul class="w-full flex md:flex-col md:gap-y-4">
+                    {
+                        items.map((item) => (
+                            <li>
+                                <a
+                                    href={item.href}
+                                    class="w-full text-white  flex items-center justify-center gap-2 hover:bg-white hover:text-black  px-6 py-4 text-xl font-medium transition duration-250"
+                                    aria-current="page"
+                                >
+                                    {item.title}
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle?.addEventListener("click", function () {
+        mobileMenu?.classList.toggle("hidden");
+    });
+</script>

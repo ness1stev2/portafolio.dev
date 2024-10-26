@@ -1,0 +1,217 @@
+---
+import Angular from "../icons/Angular.astro";
+import Bootstrap from "../icons/Bootstrap.astro";
+import TypeScript from "../icons/TypeScript.astro";
+import Devices from "../icons/Devices.astro";
+import MongoDB from "../icons/MongoDB.astro";
+import Docker from "../icons/Docker.astro";
+import Postman from "../icons/Postman.astro";
+import NestJS from "../icons/NestJS.astro";
+import JWT from "../icons/JWT.astro";
+import GitHub from "../icons/GitHub.astro";
+import VS from "../icons/VisualStudioCode.astro";
+import Sass from "../icons/Sass.astro";
+import Npm from "../icons/Npm.astro";
+import As from "../icons/As.astro";
+import Tailwind from "../icons/Tailwind.astro";
+
+const TAGS = {
+   ANGULAR: {
+      name: "Angular 18",
+      class: "bg-[#fe33d2]/40",
+      icon: Angular,
+   },
+   BOOTSTRAP: {
+      name: "Bootstap 5",
+      class: "bg-[#7e27f8]/40",
+      icon: Bootstrap,
+   },
+   TYPESCRIPT: {
+      name: "TypeScript",
+      class: "bg-[#3178c6]/40",
+      icon: TypeScript,
+   },
+   DEVICES: {
+      name: "Responsive Design",
+      class: "bg-[#3178c6]/40",
+      icon: Devices,
+   },
+   MONGO: {
+      name: "MongoDB",
+      class: "bg-[#01EC64]/40",
+      icon: MongoDB,
+   },
+   DOCKER: {
+      name: "Docker",
+      class: "bg-[#018fe2]/40",
+      icon: Docker,
+   },
+   POSTMAN: {
+      name: "Postman",
+      class: "bg-[#ff6c37]/40",
+      icon: Postman,
+   },
+   NESTJS: {
+      name: "NestJS",
+      class: "bg-[#e0254f]/40",
+      icon: NestJS,
+   },
+   JWT: {
+      name: "JWT",
+      class: "bg-[#D63AFF]/40",
+      icon: JWT,
+   },
+   GITHUB: {
+      name: "Github",
+      class: "bg-[#D63AFF]/40",
+      icon: GitHub,
+   },
+   VISUAL: {
+      name: "VS Code",
+      class: "bg-[#417CF0]/40",
+      icon: VS,
+   },
+   SASS: {
+      name: "Sass",
+      class: "bg-[#b55e96]/40",
+      icon: Sass,
+   },
+   NPM: {
+      name: "npm",
+      class: "bg-[#cb3837]/40",
+      icon: Npm,
+   },
+   AS: {
+      name: "Astro",
+      class: "bg-[#ff5d0e]/40",
+      icon: As,
+   },
+   TAILWIND: {
+      name: "Tailwind",
+      class: "bg-[#1FB0BA]/40",
+      icon: Tailwind,
+   },
+};
+
+const PROJECTS = [
+   {
+      logo: "/assets/cpsp.png",
+      title: "Caja Popular San Pablo",
+      description:
+         "Este proyecto fue desarrollado utilizando Angular 18 para crear una experiencia de usuario eficiente y optimizada. Implementé Lazy Loading para mejorar el rendimiento, reduciendo el tiempo de carga inicial. También se utilizó TypeScript para asegurar un código robusto y mantenible. La interfaz de usuario fue diseñada con Bootstrap 5, garantizando un diseño responsive. Además, se realizaron optimizaciones para SEO utilizando prácticas como la generación dinámica de metatags y optimización de rutas, lo que mejora la visibilidad en motores de búsqueda.",
+      link: "https://cajasanpablo.com/",
+      github: "https://github.com/ness1stev2/cpspApp",
+      image: "/assets/cpsp-project.webp",
+      tags: [
+         TAGS.ANGULAR,
+         TAGS.SASS,
+         TAGS.BOOTSTRAP,
+         TAGS.NPM,
+         TAGS.TYPESCRIPT,
+         TAGS.DEVICES,
+         TAGS.VISUAL,
+         TAGS.GITHUB,
+      ],
+   },
+   {
+      logo: "/assets/puerco_educoof.webp",
+      title: "Educoof - Educación Cooperativa y Financiera",
+      description:
+         "Educoof es una plataforma educativa diseñada para ofrecer módulos interactivos de educación financiera y cooperativa, enfocada en temas como ahorro, cajas populares, gestión de deudas y gastos. Cada módulo incluye actividades dinámicas y reactivas, por ejemplo, un crucigrama que permite a los usuarios verificar sus respuestas en tiempo real, y formularios personalizados en Angular que validan y retroalimentan cada entrada. El proyecto cuenta con una base de datos no relacional en MongoDB para gestionar los datos de usuarios, registro y progreso. La seguridad de la aplicación se implementó mediante guards y tokens JWT, permitiendo un sistema de login y registro seguro. Además, se utilizó NestJS en el backend y Docker para despliegues simplificados.",
+      link: "https://educoof.com/",
+      github: "https://github.com/ness1stev2/cpspApp",
+      image: "/assets/educoof-project.webp",
+      tags: [
+         TAGS.ANGULAR,
+         TAGS.NESTJS,
+         TAGS.MONGO,
+         TAGS.DOCKER,
+         TAGS.POSTMAN,
+         TAGS.JWT,
+         TAGS.SASS,
+         TAGS.BOOTSTRAP,
+         TAGS.GITHUB,
+         TAGS.TYPESCRIPT,
+         TAGS.DEVICES,
+         TAGS.NPM,
+         TAGS.VISUAL,
+      ],
+   },
+   {
+      logo: "/assets/LOGO ONE INVITACIONES.webp",
+      title: "One Invitaciones - Invitaciones Digitales Personalizadas",
+      description:
+         "One Invitaciones es una plataforma de venta de invitaciones digitales personalizadas para todo tipo de eventos especiales, como XV años, bodas, bautizos y más. Desarrollada con Astro, JavaScript y TypeScript, esta plataforma combina un diseño moderno con Tailwind CSS y animaciones atractivas de Animate.css, proporcionando una experiencia visual impactante y fácil de navegar. Los usuarios pueden explorar diferentes estilos de invitaciones digitales, ideales para capturar la esencia de cada celebración y llevar un toque único a sus eventos.",
+      link: "https://www.oneinvitaciones.com/",
+      github: "https://github.com/ness1stev2/cpspApp",
+      image: "/assets/one-invitaciones.webp",
+      tags: [
+         TAGS.AS,
+         TAGS.TAILWIND,
+         TAGS.TYPESCRIPT,
+         TAGS.GITHUB,
+         TAGS.DEVICES,
+         TAGS.NPM,
+         TAGS.VISUAL,
+      ],
+   },
+];
+---
+
+{
+   PROJECTS.map(({ image, title, description, tags, logo, link }) => (
+      <article class="mb-20">
+         <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-x-3">
+               <img class="w-10" src={logo} alt={`Logo de ${title}`} />
+               <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
+                  {title}
+               </h3>
+            </div>
+            <a
+               href={link}
+               class="inline-flex items-center gap-1 px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+            >
+               Visita la pagina
+               <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x-bind:width="size"
+                  x-bind:height="size"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  x-bind:stroke-width="stroke"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="24"
+                  height="24"
+                  stroke-width="2"
+               >
+                  <path d="M20 12l-10 0" />
+                  <path d="M20 12l-4 4" />
+                  <path d="M20 12l-4 -4" />
+                  <path d="M4 4l0 16" />
+               </svg>
+            </a>
+         </div>
+         <p class="text-lg mb-4 text-pretty">{description}</p>
+         <ul class="flex flex-row flex-wrap gap-2 mb-2">
+            {tags.map((tag) => (
+               <li>
+                  <span
+                     class={`flex items-center gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2`}
+                  >
+                     <tag.icon class="size-4" />
+                     {tag.name}
+                  </span>
+               </li>
+            ))}
+         </ul>
+         <img
+            class="rounded shadow-2xl shadow-white/10"
+            src={image}
+            alt={`Captura de pantalla del proyecto ${title}`}
+         />
+      </article>
+   ))
+}
